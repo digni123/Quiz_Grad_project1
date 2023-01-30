@@ -14,7 +14,7 @@
     /* height: 415px; */
     display: flex;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     align-items: center;
 }
 
@@ -122,6 +122,9 @@
 
 /* Media-queiry of Favorite Topic */
 @media(max-width:320px) {
+    .Lists #topic {
+        padding: 5px;
+    }
     #StartQuizBtnId {
         left: 0;
     }
