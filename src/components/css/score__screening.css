@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ReactModal__Overlay{
+    background: rgba(0, 0, 0, 0.5)!important;
+/* opacity: 0.5;- */
+}
+
+/* main__container */
+.Main__ScoreScreen {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ScreenScore {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* height: 417px; */
+    padding: 30px;
+}
+
+/* ScoreImg */
+.Whole__BackgroundImg {
+    background-image: url('../../assests/Score_ScreenImg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 450px;
+    height: 360px;
+}
+
+/* screenscoreText */
+#ScreenScoretext1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 14px;
+}
+
+/* scoreScreen Inner */
+.Score_ScreenInner {
+    height: 398px;
+    width: 454px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#scorebtn {
+    /* position: relative; */
+    /* left: 200px; */
+    margin-left: 470px;
+    border: none;
+    background-color: #FCC822;
+    width: 120px;
+    height: 37px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+/* score screeing btn */
+
+
+
+/* quizapp final Score */
+.QuizApp__Score{
+    font-size: 90px;
+    position: relative;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* MEDIA-QUEIRY OF SCORE_SCREEN PAGE */
+@media(max-width:320px) {
+    #scorebtn {
+        left: 0;
+        margin: 20px;
+    }
+
+    .Whole__BackgroundImg {
+        width: 262px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    #ScreenScoretext1 {
+        font-size: 20px;
+    }
+
+    .Score_ScreenInner {
+        height: 200px;
+        width: 246px;
+    }
+    .Score_ScreenInner img{
+        width: 62px;
+        text-align: center;
+    }
+    .ScreenScore{
+        /* border: 1px solid black; */
+        padding: 0;
+    }
+}
+
+@media(min-width:321px) and (max-width:375px)
+{
+    #scorebtn {
+        left: 0;
+        margin: 20px;
+    }
+
+    .Whole__BackgroundImg {
+        width: 262px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    #ScreenScoretext1 {
+        /* margin-bottom: 10px; */
+        font-size: 20px;
+    }
+
+    .Score_ScreenInner {
+        height: 200px;
+        width: 246px;
+    }
+    .Score_ScreenInner img{
+        width: 62px;
+        text-align: center;
+    }
+    .ScreenScore{
+        /* border: 1px solid black; */
+    }
+}
+
+@media(min-width:376px) and (max-width:425px)
+{
+    #scorebtn {
+        left: 0;
+        margin: 20px;
+    }
+
+    .Whole__BackgroundImg{
+        width: 262px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    #ScreenScoretext1 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .Score_ScreenInner {
+        height: 200px;
+        width: 246px;
+
+    }
+    .Score_ScreenInner img{
+        width: 62px;
+        text-align: center;
+    }
+}
+
+@media(min-width:426px) and (max-width:768px)
+{
+    #scorebtn {
+        left: 0;
+        margin: 20px;
+    }
+}
+@media(min-width: 426px) and (max-width:2560px)
+{
+    .QuizApp__Score{
+        font-size: 140px;
+    }
+}

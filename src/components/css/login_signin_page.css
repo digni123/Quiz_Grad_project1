@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+/* main-container */
+.containe{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.AuthenticatE_Page{
+    width: 836px;
+    display: flex;
+    height: 595px;
+    /* justify-content: space-around; */
+    /* border-bottom: 1px solid lightgray; */
+}
+/* page1 */
+.page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#textarea{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #00000099;
+}
+/* page2 */
+/* capimg  */
+.CapImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F3F369;
+}
+
+
+/* authentication of users */
+.Authentication__Details{
+    width: 80%;
+    max-width: 400px;
+}
+.Email_Style, .Password_Style{
+    color: #FCC822;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    border: none;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+#Email_Style{
+    width: 100%;
+    outline: none;
+}
+.Email__Section{
+    border: 1px solid lightgray;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+.password__section{
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    /* padding: 5px; */
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+label{
+    width: 100%;
+}
+
+/* security styles */
+.some__security{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 15px;
+}
+#Password{
+    border: none;
+    font-size: 12px;
+    background-color: white;
+}
+#Checkbox_input{
+    width: 15px;
+}
+#Checkbox__Text{
+    margin-left: 5px;
+    font-size: 13px;
+}
+/* authentication btn style */
+.AuthenticationBtn{
+    display: flex;
+}
+.authentication__Btns{
+    /* display: flex; */
+    margin-top: 30px;
+}
+#Authentication_Style{
+    background-color: #FCC822;
+    /* padding: 8px; */
+    width: 71.41px;
+    height: 37.16px;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+input{
+    outline: none;
+}
+#Authentication_Btns_2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #FCC822;
+    background-color: white;
+    /* padding: 8px; */
+    width: 71.41px;
+    height: 37.16px;
+    border: 1px solid #FCC822;
+    margin-left: 20px;
+}
+
+/* different platform */
+.DifferentPlatforms{
+    align-items: center;
+    margin-top:30px;
+}
+#useDifferentplatform{
+    color: #FCC822;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    margin-left: 15px;
+}
+
+::placeholder{
+    color: #FCC822;
+}
+
+.Email__Section:hover{
+    border-left: 3px solid #FCC822;
+}
+.password__section:hover{
+    border-left: 3px solid #FCC822;
+}
+
+/* forget password ui making */
+.email{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+}
+#forgetpassemailtext{
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+#emaillabelid{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+/* input of forget password email */
+#EmailAddress input{
+    width: 100%;
+}
+
+#EmailAddress{
+    border-radius: 20px;
+    padding: 8px;
+    outline: none;
+    border-style: none;
+    border: 2px solid #FCC822;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 12px;
+}
+#EmailAddress::placeholder{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* email continue btn */
+#Emailcontinuebtn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    background-color: #FCC822;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 8px;
+}
+/* code input flex */
+.emailCode{
+    display: flex;
+    flex-direction: column;
+}
+.codefunc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* verifying page */
+#verifyourEmail{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+#codeSendmessgaeEmail{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+#codeQueryText{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+#codeResendBtn{
+    color: red;
+}
+#forgetCodeSubmitBtn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    background-color: #FCC822;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 8px;
+}
+#ResetcodepasswordButton{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    background-color: #FCC822;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 20px;
+    width: 100%;
+}
+#newpasswordText{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom:5px;
+    display: inline-block;
+}
+#confirmPasswordText{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom:5px;
+}
+/*  */
+#settingNewPasswodText{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+#newpassword{
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #FCC822;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#newpassword::placeholder{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+#confirmnewpassword{
+    border: 1px solid #FCC822;
+    border-radius: 20px;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 40px;
+    width: 100%;
+}
+#confirmnewpassword::placeholder{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+label{
+    display: inline-block;
+}
+.setupNewpassword{
+    width: 300px;
+}
+
+/* MEDIA QUEIRY OF Login Page */
+@media(max-width:320px){
+    .Authentication__Details{
+        width: 100%;
+    }
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+    .CapImg{
+        display: none;
+    }
+}
+
+@media(min-width:321px) and (max-width:375px){
+    .Authentication__Details{
+        width: 100%;
+    }
+    .Email__Section{
+        width: 100%;
+        max-width: 500px;
+    }
+    .page{
+        width: 100%;
+    }
+    .CapImg{
+        display: none;
+    }
+}
+
+@media(min-width:376px) and (max-width:425px){
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+    .CapImg{
+        display: none;
+    }
+}
+
+@media(min-width:426px) and (max-width:480px){
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+    .CapImg{
+        display: none;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px){
+    .CapImg{
+        display: none;
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px){
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+}
+
+@media(min-width:1025px) and (max-width:1440px){
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+}
+
+@media(min-width:1440px) and (max-width:2560px){
+    .Email__Section{
+        width: 100%;
+    }
+    .page{
+        width: 100%;
+    }
+}
+
+
