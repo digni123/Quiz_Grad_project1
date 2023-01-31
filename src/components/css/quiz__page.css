@@ -190,7 +190,7 @@
 /* gray line of question  */
 .ProgressBar::before {
     content: "";
-    width: 60%;
+    width: 90%;
     height: 5px;
     position: absolute;
     top: 97px;
@@ -327,6 +327,9 @@
         /* transform: translateY(-540px); */
         background-color: #D1D1D1;
     }
+    .progress1 {
+        top: 28px;
+    }
 }
 
 @media(min-width:321px) and (max-width:375px) {
@@ -379,6 +382,9 @@
         /* left: 540px; */
         /* transform: translateY(-540px); */
         background-color: #D1D1D1;
+    }
+    .progress1 {
+        top: 28px;
     }
 }
 
@@ -457,7 +463,7 @@
 
     .ProgressBar::before {
         content: "";
-        width: 271px;
+        width: 90%;
         height: 5px;
         position: absolute;
         top: 91px;
@@ -467,7 +473,7 @@
     }
 
     .QuestionProgressBar {
-        width: 70%;
+        /* width: 70%; */
     }
 
     .AllQuiz__OptionsSection {
@@ -498,7 +504,7 @@
 
     .ProgressBar::before {
         content: "";
-        width: 60%;
+        width: 90%;
         height: 5px;
         position: absolute;
         top: 91px;
@@ -508,7 +514,7 @@
     }
 
     .QuestionProgressBar {
-        width: 70%;
+        /* width: 70%; */
     }
 }
 
@@ -533,7 +539,7 @@
 
     .ProgressBar::before {
         content: "";
-        width: 520px;
+        width: 715px;
         height: 5px;
         position: absolute;
         top: 97px;
@@ -542,7 +548,7 @@
     }
 
     .QuestionProgressBar {
-        width: 70%;
+        /* width: 70%; */
     }
 }
 
@@ -567,7 +573,7 @@
 
     .ProgressBar::before {
         content: "";
-        width: 61%;
+        width: 867px;
         height: 5px;
         position: absolute;
         top: 98px;
@@ -613,5 +619,17 @@
 
     .QuestionProgressBar {
         width: 70%;
+    }
+}
+@media(min-width:576px) and (max-width:767px){
+    .ProgressBar::before {
+        content: "";
+        width: 494px;
+        height: 5px;
+        position: fixed;
+        top: 91px;
+        /* left: 540px; */
+        /* transform: translateY(-540px); */
+        background-color: #D1D1D1;
     }
 }

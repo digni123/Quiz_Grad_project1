@@ -159,22 +159,25 @@
         align-items: center;
         justify-content: center; */
         /* margin: 50px 0; */
-        padding-top: 120px;
+        padding-top: 60px;
     }
 }
 
 @media(min-width:321px) and (max-width:375px) {
+    .Lists #topic {
+        padding: 5px;
+    }
     #StartQuizBtnId {
         left: 0;
     }
 
     .CancelPageIcon {
-        left: 155px;
+        left: 120px;
     }
 
     #FavoriteTopic_MainText {
         text-align: center;
-        font-size: 25px;
+        font-size: 21px;
         margin: 15px 0 10px 0;
     }
 
@@ -198,7 +201,7 @@
         align-items: center;
         justify-content: center; */
         /* margin: 50px 0; */
-        padding-top: 120px;
+        padding-top: 60px;
     }
 }
 
@@ -208,7 +211,7 @@
     }
 
     .CancelPageIcon {
-        left: 180px;
+        left: 169px;
     }
 
     #FavoriteTopic_MainText {
@@ -237,11 +240,11 @@
         align-items: center;
         justify-content: center; */
         /* margin: 50px 0; */
-        padding-top: 120px;
+        padding-top: 60px;
     }
 }
 
-@media(min-width:426px) and (max-width:768px) {
+@media(min-width:426px) and (max-width:480px) {
     #FavoriteTopic_MainText {
         text-align: center;
         font-size: 25px;
@@ -259,8 +262,51 @@
     .ReactModal__Overlay::-webkit-scrollbar {
         display: none;
     }
+
+    .CancelPageIcon {
+        position: relative;
+        left: 169px;
+    }
+
+    #StartQuizBtnId {
+        left: 119px;
+    }
     
     /* main-containers */
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    #FavoriteTopic_MainText {
+        text-align: center;
+        font-size: 25px;
+        margin: 15px 0 10px 0;
+    }
+
+    #FavoriteTopic_SubText {
+        font-size: 15px;
+    }
+
+    .ReactModal__Overlay {
+        overflow: auto;
+        padding: 50px 0;
+    }
+
+    .CancelPageIcon {
+        position: relative;
+        left: 169px;
+    }
+
+    #StartQuizBtnId {
+        left: 119px;
+    }
+
+    .ReactModal__Overlay::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Topics__Lists {
+        max-width: 353px;
+    }
 }
 
 @media(min-width:769px) and (max-width:1024px) {
