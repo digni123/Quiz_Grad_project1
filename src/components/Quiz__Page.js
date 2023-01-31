@@ -111,11 +111,6 @@ function Quiz__Page() {
     useEffect(() => {
         ttt()
         localStorage.removeItem('QuizScore');
-
-        // making our counter 0 default code:
-        let next = counter = 0;
-        setCounter(next)
-
     }, [])
 
 
@@ -135,7 +130,13 @@ function Quiz__Page() {
             }
             else {
                 progress();
-            
+
+                if (counter == 0) {
+                    counter = counter + 1
+                    setCounter(counter);
+                    progress();
+                }
+
                 // setQuestionNo(Test[counter].no)
                 setQuestion(Test.data?.[counter].question)
                 setOptionOne(Test.data?.[counter].Options[0])
@@ -145,7 +146,12 @@ function Quiz__Page() {
 
 
                 let count = counter + 1;
-                setCounter(count);
+                if (count == 5) {
+                    setCounter(4)
+                }
+                else {
+                    setCounter(count);
+                }
             }
         }
         else {
@@ -342,11 +348,11 @@ function Quiz__Page() {
                                         <p id='ScreenScoretext1'>Your Score</p>
                                     </div>
                                     {/* <img src={Number_Img} alt="ScoreImg" /> */}
-                                    <div className='QuizApp__Score'>{Quiz_Score}</div>  
+                                    <div className='QuizApp__Score'>{Quiz_Score}</div>
                                 </div>
                             </div>
                             <Link to='/'>
-                                <button id='scorebtn'>Complete</button> 
+                                <button id='scorebtn'>Complete</button>
                             </Link>
                         </div>
                     </div>
