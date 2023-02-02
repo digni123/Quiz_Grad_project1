@@ -193,8 +193,18 @@ function Quiz__Page() {
     function options(e) {
 
         let final = e.target.innerHTML
+        localStorage.setItem("tickoption", final);
 
         if (counter == Test.data?.length) {
+            counter = counter - 1
+            setCounter(counter);
+
+            let output = Test.data?.[counter].ans
+
+            if (final == output) {
+                setScore(score += 1)
+                localStorage.setItem("QuizScore", score)
+            }
             patch()
             // navigate('/screenscore');
             openModal();
@@ -209,11 +219,6 @@ function Quiz__Page() {
             setOptionTwo(Test.data?.[counter].Options[1])
             setOptionThree(Test.data?.[counter].Options[2])
             setOptionFour(Test.data?.[counter].Options[3])
-
-            let dd = counter + 1
-            setCounter(dd)
-
-            progress();
 
             if (final == output) {
 
@@ -231,6 +236,11 @@ function Quiz__Page() {
             else {
                 // console.log('hjuhgyugyuguy answer');
             }
+
+            let dd = counter + 1
+            setCounter(dd)
+
+            progress();
         }
 
     }
@@ -259,7 +269,7 @@ function Quiz__Page() {
         };
 
 
-        const quiz_score = await fetch(`http://192.168.1.92:3000/quiz/score/${userId}`, requestOptions)
+        const quiz_score = await fetch(`http://192.168.29.140:3000/quiz/score/${userId}`, requestOptions)
             .then(response => response.json())
             .then()
             .catch(error => console.log('error', error));
@@ -315,7 +325,7 @@ function Quiz__Page() {
             redirect: 'follow'
         };
 
-        const fetchData = await fetch(`http://192.168.1.92:3000/quiz/topic-quiz/${userId}`, requestOptions)
+        const fetchData = await fetch(`http://192.168.29.140:3000/quiz/topic-quiz/${userId}`, requestOptions)
         const data = await fetchData.json();
 
         // set the deafult question and options in quiz app
