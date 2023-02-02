@@ -70,7 +70,7 @@ function LogIn_SignIn_Page() {
             redirect: 'follow'
         };
 
-        fetch("http://192.168.29.141:3000/sign-up/otp-send", requestOptions)
+        fetch("http://192.168.1.92:3000/sign-up/otp-send", requestOptions)
             .then(response => response.text())
             .then((otp) => {
                 localStorage.setItem('forgetPassData', otp);
@@ -113,7 +113,7 @@ function LogIn_SignIn_Page() {
     function Login() {
 
         // console.log(email, password, '<===>');
-        let url = 'http://192.168.29.141:3000/sign-up/login';
+        let url = 'http://192.168.1.92:3000/sign-up/login';
 
         let items = {
             email: email,
@@ -132,6 +132,7 @@ function LogIn_SignIn_Page() {
         }).then((finaldata) => {
             if (finaldata.status == 200) {
                 localStorage.setItem('Username', finaldata.Data.username);
+                localStorage.setItem('UserId', finaldata.Data._id);
                 setTimeout(() => {
                     navigate("/");
                 }, 2000);
@@ -166,7 +167,7 @@ function LogIn_SignIn_Page() {
             // console.log('dfdfhdkfjdfkdhfkdhf======',finaldata.Data.email ,'()()',finaldata.token  );
         })
 
-        // fetch('http://192.168.29.141:3000/sign-up/login').then((data) => {   
+        // fetch('http://192.168.1.92:3000/sign-up/login').then((data) => {   
         //     return data.json()
         // }).then((finaldata) => {
         //     console.log(finaldata);
@@ -200,7 +201,7 @@ function LogIn_SignIn_Page() {
             redirect: 'follow'
         };
 
-        await fetch(`http://192.168.29.141:3000/sign-up/reset-password/${Id}`, requestOptions)
+        await fetch(`http://192.168.1.92:3000/sign-up/reset-password/${Id}`, requestOptions)
             .then(response => response.text())
             .then((final) => {
                 final = JSON.parse(final)

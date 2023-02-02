@@ -111,6 +111,7 @@ function Quiz__Page() {
     useEffect(() => {
         ttt()
         localStorage.removeItem('QuizScore');
+        Modal.setAppElement('#yourAppElement');
     }, [])
 
 
@@ -193,49 +194,45 @@ function Quiz__Page() {
 
         let final = e.target.innerHTML
 
-
-
         if (counter == Test.data?.length) {
-            console.log(e.target.id)
             patch()
             // navigate('/screenscore');
             openModal();
-
-            let ResetCounter = counter = 0
-            setCounter(ResetCounter);
         }
         else {
+            let output = Test.data?.[counter].ans
+            console.log(output);
+            // counter set at 0 number perfect
 
+            setQuestion(Test.data?.[counter].question)
+            setOptionOne(Test.data?.[counter].Options[0])
+            setOptionTwo(Test.data?.[counter].Options[1])
+            setOptionThree(Test.data?.[counter].Options[2])
+            setOptionFour(Test.data?.[counter].Options[3])
+
+            let dd = counter + 1
+            setCounter(dd)
+
+            progress();
+
+            if (final == output) {
+
+                setScore(score += 1)
+                localStorage.setItem("QuizScore", score)
+
+                // if (score <= Test.data?.length) {    
+                //     setScore(scoreInc)
+                //     console.log("your final score is =", score)
+                // }
+                // else {
+                //     console.log('out of the box');
+                // }
+            }
+            else {
+                // console.log('hjuhgyugyuguy answer');
+            }
         }
 
-        setQuestion(Test.data?.[counter].question)
-        setOptionOne(Test.data?.[counter].Options[0])
-        setOptionTwo(Test.data?.[counter].Options[1])
-        setOptionThree(Test.data?.[counter].Options[2])
-        setOptionFour(Test.data?.[counter].Options[3])
-
-        let dd = counter + 1
-        setCounter(dd)
-        progress();
-
-        let output = Test.data?.[counter - 1].ans
-
-        if (final == output) {
-
-            setScore(score += 1)
-            localStorage.setItem("QuizScore", score)
-
-            // if (score <= Test.data?.length) {    
-            //     setScore(scoreInc)
-            //     console.log("your final score is =", score)
-            // }
-            // else {
-            //     console.log('out of the box');
-            // }
-        }
-        else {
-            // console.log('hjuhgyugyuguy answer');
-        }
     }
 
 
@@ -262,9 +259,9 @@ function Quiz__Page() {
         };
 
 
-        const quiz_score = await fetch(`http://192.168.29.141:3000/quiz/score/${userId}`, requestOptions)
+        const quiz_score = await fetch(`http://192.168.1.92:3000/quiz/score/${userId}`, requestOptions)
             .then(response => response.json())
-            .then(result => console.log(result))
+            .then()
             .catch(error => console.log('error', error));
 
     }
@@ -318,7 +315,7 @@ function Quiz__Page() {
             redirect: 'follow'
         };
 
-        const fetchData = await fetch(`http://192.168.29.141:3000/quiz/topic-quiz/${userId}`, requestOptions)
+        const fetchData = await fetch(`http://192.168.1.92:3000/quiz/topic-quiz/${userId}`, requestOptions)
         const data = await fetchData.json();
 
         // set the deafult question and options in quiz app
@@ -398,6 +395,7 @@ function Quiz__Page() {
                     </div>
                 </div>
             </div>
+            <div id="yourAppElement" style={{ display: 'none' }} className="yourClass"></div>
         </>
     )
 }

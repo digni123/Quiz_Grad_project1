@@ -123,6 +123,7 @@ function Main__Slider() {
 
     useEffect(() => {
         popupanimation()
+        Modal.setAppElement('#yourAppElement');
     }, [])
 
     function popupanimation() {
@@ -153,7 +154,7 @@ function Main__Slider() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             border: 0,
-        
+            // padding: 0,
         },
     };
 
@@ -288,6 +289,7 @@ function Main__Slider() {
                     <img src={Line} alt="" />
                 </div>
             </div>
+            <div id="yourAppElement" style={{display:'none'}} className="yourClass"></div>
         </>
     )
 }

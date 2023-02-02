@@ -41,7 +41,7 @@ function SignUpPage() {
             password: password,
             cPassword: cPassword
         }
-        fetch('http://192.168.29.141:3000/sign-up', {   
+        fetch('http://192.168.1.92:3000/sign-up', {   
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
